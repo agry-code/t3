@@ -129,7 +129,9 @@ function update() {
             guess += letter;
     }
 
-    guess= guess.toLocaleLowerCase();
+    guess= guess.toLocaleLowerCase(); //case sensitive
+    console.log(guess)
+
     if(!wordList.includes(guess)){
         document.getElementById("answer").innerText="Not a sinsons character";
         return;
@@ -153,7 +155,7 @@ function update() {
         //Is it in the right position?
         if (word[i] == letter) {
             currTile.classList.add("correct");
-            let keyTile = document.getElementById("key" + letter);
+            let keyTile = document.getElementById("Key" + letter);
             keyTile.classList.remove("present");
             keyTile.classList.add("correct");
             correct = +1;
