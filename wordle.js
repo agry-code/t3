@@ -5,7 +5,7 @@ var row = 0;
 var col = 0;
 
 var gameOver = false;
-var wordList = ['homer', 'marge', 'burns', 'clown', 'ralph', 'comic', 'lenny', 'patty', 'selma', 'frank', 'disco', 'donut', 'kodos', 'itchy', 'jimbo', 'muntz', 'barto', 'donut', 'mindy', 'okily', 'maude', 'sharp', 'santa', 'raven', 'eddie', 'frink', 'janey', 'laura', 'stacy', 'cecil', 'chief', 'artie', 'lance', 'power', 'arnie', 'helen', 'lewis', 'plant', 'jones', 'sarah', 'dolph', 'largo', 'akira', 'billy', 'larry', 'hyman', 'colin', 'ernst', 'gavin', 'alice', 'eliza', 'chuck', 'terri', 'louie', 'tatum', 'mayor', 'roger', 'dewey', 'luigi', 'doris', 'shary', 'smart', 'luann', 'gabbo', 'snrub', 'feare'];
+var wordList = ['homer', 'marge', 'burns', 'ralph', 'lenny','patty', 'selma', 'frank', 'disco', 'donut', 'kodos', 'rasca', 'jimbo', 'muntz', 'barto', 'donut', 'mindy', 'maude', 'santa', 'raven', 'eddie', 'frink', 'janey', 'laura', 'stacy', 'cecil', 'artie', 'lance', 'power', 'arnie', 'helen', 'lewis', 'jones', 'sarah', 'dolph', 'largo', 'akira', 'billy', 'larry', 'hyman', 'colin', 'gavin', 'alice', 'eliza', 'chuck', 'terri', 'louie', 'tatum', 'dewey', 'luigi', 'doris', 'shary', 'luann', 'gabbo'];
 var word = wordList[Math.floor(Math.random()* wordList.length)].toUpperCase();
 console.log(word);
 
