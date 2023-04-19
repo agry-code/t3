@@ -6,17 +6,9 @@ body {
     background-repeat: repeat; /* Repetir la imagen horizontal y verticalmente */
     background-size: 50% auto; /* Reducir el tamaño de la imagen */
   }
-  @media (max-width: 600px) {
-    body {
-      font-size: 14px;
-      margin: 0;
-      padding: 0;
-    }
-  }
 hr{
     width: 500px;
 }
-
 #title {
     font-family: 'Bangers', cursive;
     font-size: 36px;
@@ -94,3 +86,46 @@ align-items: center;
     justify-content: center;
     align-items: center;
     }
+    /* Estilos para pantalla pequeña */
+@media screen and (max-width: 720px) {
+    body {
+      background-size: 180% auto; /* Ajustar la imagen de fondo al ancho del dispositivo */
+    }
+  
+    hr {
+      width: 100%; /* Ajustar el ancho del hr al ancho del dispositivo */
+    }
+  
+    #board {
+      width: 100%; /* Ajustar el ancho del tablero al ancho del dispositivo */
+      height: auto; /* Ajustar la altura del tablero según su contenido */
+      max-width: 450px; /* Establecer el ancho máximo del tablero */
+      margin: 0 auto;
+    }
+  
+    .tile {
+      width: 10vw; /* Establecer el ancho de cada casilla en unidades relativas al ancho de la pantalla */
+      height: 10vw; /* Establecer la altura de cada casilla en unidades relativas al ancho de la pantalla */
+      font-size: 3vw; /* Establecer el tamaño de fuente en unidades relativas al ancho de la pantalla */
+      margin: 1vw; /* Establecer el margen en unidades relativas al ancho de la pantalla */
+    }
+  
+    .keyboard-row {
+      width: 100%; /* Ajustar el ancho del teclado al ancho del dispositivo */
+      max-width: 673px; /* Establecer el ancho máximo del teclado */
+      margin: 0 auto;
+
+    }
+  
+    .key-tile, .enter-key-tile {
+      width: 8vw; /* Establecer el ancho de cada tecla en unidades relativas al ancho de la pantalla */
+      height: 8vw; /* Establecer la altura de cada tecla en unidades relativas al ancho de la pantalla */
+      font-size: 3vw; /* Establecer el tamaño de fuente en unidades relativas al ancho de la pantalla */
+      margin: 0.5vw; /* Establecer el margen en unidades relativas al ancho de la pantalla */
+    }
+  
+    .enter-key-tile {
+      width: 17vw; /* Establecer el ancho de la tecla Enter en unidades relativas al ancho de la pantalla */
+    }
+  }
+  
