@@ -2,7 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     background-color: skyblue;
-    background-image: url('https://static.wikia.nocookie.net/clubpenguin/images/f/f1/Clouds_Background.png/revision/latest?cb=20121024170730&path-prefix=es'); /* URL de la imagen de nubes */
+    background-image: url(./Clouds_Background.webp); /* URL de la imagen de nubes */
     background-repeat: repeat; /* Repetir la imagen horizontal y verticalmente */
     background-size: 50% auto; /* Reducir el tamaño de la imagen */
   }
