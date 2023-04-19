@@ -6,7 +6,13 @@ body {
     background-repeat: repeat; /* Repetir la imagen horizontal y verticalmente */
     background-size: 50% auto; /* Reducir el tamaño de la imagen */
   }
-  
+  @media (max-width: 600px) {
+    body {
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
+  }
 hr{
     width: 500px;
 }
