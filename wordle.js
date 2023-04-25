@@ -45,6 +45,8 @@ function intialize() {
         let currRow= keyboard[i];
         let keyboardRow = document.createElement("div");
         keyboardRow.classList.add("keyboard-row");
+        let targetElement = document.getElementById("mandanga");
+        targetElement.parentNode.insertBefore(keyboardRow, targetElement);
 
         for(let j=0;j<currRow.length;j++){
             let keyTile = document.createElement("div");

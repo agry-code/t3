@@ -1,6 +1,7 @@
 @media screen and (max-width: 640px) {
     body {
       background-size: 300% auto; /* Ajustar la imagen de fondo al ancho del dispositivo */
+      height: 100%;
     }
   
     hr {
@@ -46,6 +47,7 @@ body {
     background-image: url(./Clouds_Background.webp); /* URL de la imagen de nubes */
     background-repeat: repeat; /* Repetir la imagen horizontal y verticalmente */
     background-size: 180% auto; /* Ajustar la imagen de fondo al ancho del dispositivo */
+    height: 100%;
   }
 hr{
     width: 500px;
