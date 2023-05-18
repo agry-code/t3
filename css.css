@@ -1,3 +1,6 @@
+*{
+  cursor: url("./cursor.png"), auto;
+}
 nav {
   background-color: #333;
   color: #fff;
