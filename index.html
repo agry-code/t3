@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Trabajo Final Lenguaje Marcas</title>
-  <link id="style-sheet" rel="stylesheet" href="css.css">
-  <script src="https://kit.fontawesome.com/dc2ceecb89.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Springfidle</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/dc2ceecb89.js" crossorigin="anonymous"></script>
 
+    <script src="index.js"></script>
+    <style>
+        html, body {
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+        }
+      </style>
+</head>
+<body class="container h-100 d-flex justify-content-center align-items-center flex-column">
   <nav>
     <ul>
       <li><a href="https://agry-code.github.io/Js/ta-te-ti.html">TA-TE-TI</a></li>
       <li><a href="#" onclick="mostrarInformacion(msg1)">Más información</a></li>
-      <li><a href="https://agry-code.github.io/t3/wordle.html">SPRINGFIELD</a></li>
+      <li><a href="https://agry-code.github.io/t3/">Springflied</a></li>
+      <li><a href="#">Ajustes</a></li>
     </ul>
     <button class="nav-btn" id="bdark" style="display:flex;">
       <span><i class="fa-solid fa-sun"></i></span>
       <span><i class="fa-solid fa-moon"></i></span>
     </button>
   </nav>
-  <h1>Bienvenido a mi página principal</h1>
-  <p>En el navegador de arriba estan disponibles mis juegitos</p>
-  <p><a href="#" onclick="mostrarInformacion(msg2)">¿Quieres un truco para ganar en el SPRINGFIELD?</p>
-  <script>
-    const msg1 = "Adrian Navarro Gallardo\n1DAM\nTema elegido de Proyecto Final: WORDLE SIMPSON: SPRINGFIELD";
-    const msg2 = "Mira la consola del navegador en SPRINGFIELD para tener la solución";
-    function mostrarInformacion(msg) {
-      alert(msg);
+    <div></div> 
+        <h1 id="title" >Springfidle</h1>
+        <h1 id="answer"></h1>
+        <hr>
+        <br>
+         <div id="board">
+        </div>
+</div> 
+<script>
+  const msg1 = "Adrian Navarro Gallardo\n1DAM\nTema elegido de Proyecto Final: WORDLE SIMPSON: SPRINGFIELD";
+  const msg2 = "Mira la consola del navegador en SPRINGFIELD para tener la solución";
+  function mostrarInformacion(msg) {
+    alert(msg);
+  }
+
+  const bdark = document.querySelector('#bdark');
+  const body = document.querySelector('body');
+
+  load();
+
+  bdark.addEventListener('click', e => {
+    body.classList.toggle('darkmode');
+    store(body.classList.contains('darkmode'));
+  })
+
+  function load(){
+    const darkmode = localStorage.getItem('darkmode');
+    if(!darkmode){
+      store('false');
+    }else if(darkmode =='true'){
+        body.classList.add('darkmode');
     }
+  }
+  function store(value){
+    localStorage.setItem('darkmode',value);
+  }
 
-    const bdark = document.querySelector('#bdark');
-    const body = document.querySelector('body');
-
-    load();
-
-    bdark.addEventListener('click', e => {
-      body.classList.toggle('darkmode');
-      store(body.classList.contains('darkmode'));
-    })
-
-    function load(){
-      const darkmode = localStorage.getItem('darkmode');
-      if(!darkmode){
-        store('false');
-      }else if(darkmode =='true'){
-          body.classList.add('darkmode');
-      }
-    }
-    function store(value){
-      localStorage.setItem('darkmode',value);
-    }
-
-  </script>
+</script>
 </body>
-
 </html>

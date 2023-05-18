@@ -1,3 +1,6 @@
+*{
+  cursor: url("./cursor.png"), auto;
+}
 @media screen and (max-width: 640px) {
     body {
       background-size: 300% auto; /* Ajustar la imagen de fondo al ancho del dispositivo */
@@ -45,10 +48,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     background-color: skyblue;
-    background-image: url(./Clouds_Background.webp); /* URL de la imagen de nubes */
-    background-repeat: repeat; /* Repetir la imagen horizontal y verticalmente */
-    background-size: 180% auto; /* Ajustar la imagen de fondo al ancho del dispositivo */
-    height: 100%;
+    background-image: url(./casasimpsondia.webp); /* URL de la imagen de nubes */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 hr{
     width: 500px;
@@ -131,3 +134,42 @@ align-items: center;
     align-items: center;
     }
     /* Estilos para pantalla pequeña */
+    nav {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      width: 100%;
+      align-items: center; /* para centrar verticalmente los elementos */
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;    
+    }
+    
+    nav ul li {
+      margin: 0 10px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    
+    /* agregamos una clase "ml-auto" para mover el botón a la derecha */
+    .nav-btn {
+      margin-left: auto;
+    }
+    body.darkmode {
+      background-color: #202020;
+      background-image: url(./casasimpsonnoche.webp);
+      color: white;
+    }
