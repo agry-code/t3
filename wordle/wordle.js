@@ -45,7 +45,7 @@ function intialize() {
         let currRow= keyboard[i];
         let keyboardRow = document.createElement("div");
         keyboardRow.classList.add("keyboard-row");
-        
+
         for(let j=0;j<currRow.length;j++){
             let keyTile = document.createElement("div");
 
@@ -188,4 +188,4 @@ function update() {
     row += 1;
     col = 0;
     }   
-
+    

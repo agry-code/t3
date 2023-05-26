@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dc2ceecb89.js" crossorigin="anonymous"></script>
+    <title>ta-te-ti</title>
+    <link rel="stylesheet" href="index.css"> 
+    <style>
+        .board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border: 2px solid purple;
+}
+
+.board div {
+  width: 98px;
+  height: 98px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.board div:nth-child(3n+1) {
+  border-left: none;
+}
+
+.board div:nth-child(3n) {
+  border-right: none;
+}
+
+.board div:nth-child(-n+3) {
+  border-top: none;
+}
+
+.board div:nth-last-child(-n+3) {
+  border-bottom: none;
+}
+
+.board div:hover {
+  background-color: #eee;
+}
+#reset {
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body onload="cargarNick()">
+  <nav>
+    <ul>
+      <li><a href="main.html">Inicio</a></li>
+      <li><a href="./ta-te-ti.html">TA-TE-TI</a></li>
+      <li><a href="./modal.html">Información Adicional (XML)</a></li>
+      <li><a href="./wordle/springfidle.html">Springfidle</a></li>
+      <li><a href="./setting.html">Setting</a></li>
+
+    <button id="myButton" class="fa-regular fa-file"></button>
+    <div id="myModal" class="modal" style="display: block;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p style="color: black;">Adrian Navarro Gallardo 1DAM</p>
+        <p style="color: black;">Con el proposito de darle sentido a la pantalla de inicio. La ventana modal y los ajustes solo estarán disponibles en el inicio </p>
+      </div>
+    </div>
+  </ul>
+</nav>
+<div id="textoIngresado"></div>
+<div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+    <div class="board">
+        <div id="0"></div>
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+        <div id="4"></div>
+        <div id="5"></div>
+        <div id="6"></div>
+        <div id="7"></div>
+        <div id="8"></div>
+        <button id="reset">Reiniciar</button>
+      </div>
+
+      <script src="./main.js"></script>
+      <script src="./tateti.js"></script>
+      <script src="./modoNoche.js"></script>
+      <script src="./nick.js"></script>
+      <script>
+        // modoNoche.js
+      
+        function load() {
+        const darkmode = localStorage.getItem('darkmode');
+        if (!darkmode) {
+          store('false');
+        } else if (darkmode == 'true') {
+          body.classList.add('darkmode');
+        }
+      }
+      function store(value) {
+        localStorage.setItem('darkmode', value);
+      }
+      load();
+      </script>
+
+
+</body>
+</html>

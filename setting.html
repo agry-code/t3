@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi HTML Principal</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://kit.fontawesome.com/dc2ceecb89.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin-top: 35px; /* Se agrega margen superior para dejar espacio con el nav */
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="main.html">Inicio</a></li>
+      <li><a href="./ta-te-ti.html">TA-TE-TI</a></li>
+      <li><a href="./modal.html">Información Adicional (XML)</a></li>
+      <li><a href="./wordle/springfidle.html">Springfidle</a></li>
+      <li><a href="./setting.html">Setting</a></li>
+
+
+    <button id="myButton" class="fa-regular fa-file"></button>
+  </nav>
+
+  <div id="myModal" class="modal" style="display: block;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p style="color: black;">Adrian Navarro Gallardo 1DAM</p>
+      <p style="color: black;">Con el propósito de darle sentido a la pantalla de inicio. La ventana modal y los
+        ajustes solo estarán disponibles en el inicio </p>
+    </div>
+  </div>
+</ul>
+  <h1>Ajustes</h1>
+
+  <button id="bdark">Cambiar a modo noche</button>
+  <br>
+  <br>  
+  <div>
+    <label for="cuadroTexto">Ingresa tu nombre:</label>
+    <input type="text" id="inputNick">
+    <button id="botonInsertar">Insertar Nick</button>
+
+  <div id="nombreUsuario"></div>
+
+  <br>
+  <!-- Botón para cambiar el fondo de Springfield -->
+  <button id="cambiarFondo">Cambiar fondo de Springfield</button>
+  <div id="textoIngresado"></div>
+  
+  <script src="./main.js"></script>
+  <script src="./modoNoche.js"></script>
+  <script src="./nick.js"></script>
+  <script src="./cambiarFondo.js"></script>
+</body>
+
+</html>

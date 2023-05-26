@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> 
+    <script src="https://kit.fontawesome.com/dc2ceecb89.js" crossorigin="anonymous"></script>
+    <title>Navarro Gallardo Adrian</title>
+</head>
+<body onload="cargarNick()">
+
+    <nav>
+        <ul>
+          <li><a href="main.html">Inicio</a></li>
+          <li><a href="./ta-te-ti.html">TA-TE-TI</a></li>
+          <li><a href="./modal.html">Información Adicional (XML)</a></li>
+          <li><a href="./wordle/springfidle.html">Springfidle</a></li>
+          <li><a href="./setting.html">Setting</a></li>
+
+        <button id="myButton" class="fa-regular fa-file"></button>
+        <div id="myModal" class="modal" style="display: block;">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p style="color: black;">Adrian Navarro Gallardo 1DAM</p>
+            <p style="color: black;">Con el proposito de darle sentido a la pantalla de inicio. La ventana modal y los ajustes solo estarán disponibles en el inicio </p>
+          </div>
+        </div>
+      </ul>
+    </nav>
+    <div id="textoIngresado"></div>
+
+    <script src="./main.js"></script>
+    <script src="./modoNoche.js"></script>
+    <script src="./nick.js"></script>
+    <script>
+      // main.js
+
+// Aquí va el resto de tu código específico de la página main.html
+
+function load() {
+  const darkmode = localStorage.getItem('darkmode');
+  if (!darkmode) {
+    store('false');
+  } else if (darkmode == 'true') {
+    body.classList.add('darkmode');
+  }
+}
+function store(value) {
+  localStorage.setItem('darkmode', value);
+}
+load();
+
+</script>
+    
+</body>
+</html>
